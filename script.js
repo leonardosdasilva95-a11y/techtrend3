@@ -19,4 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   document.body.appendChild(toggle);
+
+  // Animação da bolinha
+  const bola = document.getElementById("bola");
+  let direcao = 1;
+  let posicao = 0;
+
+  function animar() {
+    posicao += direcao * 2;
+    if (posicao > 300 || posicao < 0) {
+      direcao *= -1;
+    }
+    bola.style.left = posicao + "px";
+    requestAnimationFrame(animar);
+  }
+
+  animar();
 });

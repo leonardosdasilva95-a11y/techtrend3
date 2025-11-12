@@ -25,17 +25,47 @@
   <main>
     <section>
       <h2>Bem-vindo ao futuro da tecnologia</h2>
-
       <p><strong>TechTrends 3:</strong> Um olhar direto para o futuro da tecnologia — simples, acessível e em português.</p>
-
       <p>Explore as principais tendências que estão moldando o mundo digital em 2025. De inteligência artificial a segurança da informação, este espaço reúne conteúdo claro e atualizado para quem quer entender o impacto da tecnologia no dia a dia.</p>
-
       <img src="imagens/inicio2025.jpg" alt="Imagem de boas-vindas ao TechTrends 3" style="width:100%; max-width:600px; margin-top:1rem;" />
+    </section>
+
+    <section>
+      <h2>Explore os temas</h2>
+      <ul>
+        <li><strong>IA:</strong> Inteligência artificial que aprende, cria e transforma o mundo.</li>
+        <li><strong>Cloud:</strong> Computação em nuvem que conecta e acelera negócios.</li>
+        <li><strong>Segurança:</strong> Proteção digital para dados, pessoas e empresas.</li>
+        <li><strong>Posts:</strong> Artigos, animações e curiosidades sobre tecnologia.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Curiosidade</h2>
+      <button onclick="alert('Sabia que o termo “Inteligência Artificial” foi criado em 1956? 🤖')">Clique para saber</button>
+    </section>
+
+    <section>
+      <h2>Frase do dia</h2>
+      <p id="frase-index"></p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const frasesIndex = [
+        "Tecnologia é ponte, não barreira.",
+        "O futuro é digital — e começa agora.",
+        "Quem aprende tecnologia, transforma o mundo.",
+        "Inovação é a linguagem do amanhã."
+      ];
+      const frase = frasesIndex[Math.floor(Math.random() * frasesIndex.length)];
+      document.getElementById("frase-index").textContent = frase;
+    });
+  </script>
 </body>
 </html>

@@ -2,9 +2,6 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Página de posts e tendências no TechTrends 3." />
-  <meta name="author" content="Leonardo da Silva" />
   <title>Posts — TechTrends 3</title>
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
@@ -24,18 +21,97 @@
 
   <main>
     <section>
-      <h2>Últimos insights</h2>
+      <h2>Animação com JavaScript</h2>
+      <p>Veja abaixo uma animação simples feita com HTML, CSS e JavaScript:</p>
+      <div id="animacao-container">
+        <div id="bola"></div>
+      </div>
+    </section>
 
-      <p><strong>Insights Tech:</strong> Acompanhe tendências que moldam o futuro — de IA generativa a computação quântica.</p>
+    <section>
+      <h2>O que é Java?</h2>
+      <p>Java é uma linguagem de programação criada em 1995 pela Sun Microsystems. Ela é orientada a objetos, multiplataforma e amplamente usada no desenvolvimento de aplicações web, móveis e corporativas.</p>
+    </section>
 
-      <p>Os posts do TechTrends 3 trazem análises rápidas e acessíveis sobre os avanços mais relevantes da tecnologia. Aqui você encontra reflexões sobre inovação, impacto social, ética digital e o papel da tecnologia no cotidiano.</p>
+    <section>
+      <h2>Por que escolher Java?</h2>
+      <ul>
+        <li>☕ Portabilidade: roda em qualquer sistema com máquina virtual Java (JVM)</li>
+        <li>🔒 Segurança: possui recursos integrados para proteger aplicações</li>
+        <li>⚙️ Escalabilidade: ideal para sistemas grandes e complexos</li>
+        <li>🌐 Comunidade ativa: milhares de bibliotecas e frameworks disponíveis</li>
+      </ul>
+    </section>
 
-      <img src="imagens/posts2025.jpg" alt="Imagem ilustrativa de posts e tendências tecnológicas" style="width:100%; max-width:600px; margin-top:1rem;" />
+    <section>
+      <h2>Onde o Java é usado?</h2>
+      <p>Java está presente em sistemas bancários, aplicativos Android, servidores web, jogos, e até em dispositivos embarcados. Empresas como Netflix, Amazon e LinkedIn utilizam Java em suas infraestruturas.</p>
+    </section>
+
+    <section>
+      <h2>Curiosidade</h2>
+      <button onclick="alert('Java não é café, mas também é viciante! ☕')">Clique para saber</button>
+    </section>
+
+    <section>
+      <h2>Frase do dia</h2>
+      <p id="frase"></p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const body = document.body;
+
+      // Botão para alternar tema
+      const toggle = document.createElement("button");
+      toggle.textContent = "Alternar tema";
+      toggle.style.position = "fixed";
+      toggle.style.bottom = "1rem";
+      toggle.style.right = "1rem";
+      toggle.style.padding = "0.5rem 1rem";
+      toggle.style.backgroundColor = "#00bcd4";
+      toggle.style.color = "#121212";
+      toggle.style.border = "none";
+      toggle.style.borderRadius = "5px";
+      toggle.style.cursor = "pointer";
+
+      toggle.onclick = () => {
+        body.classList.toggle("dark-theme");
+      };
+
+      document.body.appendChild(toggle);
+
+      // Animação da bolinha
+      const bola = document.getElementById("bola");
+      let direcao = 1;
+      let posicao = 0;
+
+      function animar() {
+        posicao += direcao * 2;
+        if (posicao > 300 || posicao < 0) {
+          direcao *= -1;
+        }
+        bola.style.left = posicao + "px";
+        requestAnimationFrame(animar);
+      }
+
+      animar();
+
+      // Frase do dia
+      const frases = [
+        "Código limpo é poesia em movimento.",
+        "Java é poderoso, confiável e está em todo lugar.",
+        "Quem domina Java, domina o mercado.",
+        "Persistência é a chave para dominar qualquer linguagem."
+      ];
+      const frase = frases[Math.floor(Math.random() * frases.length)];
+      document.getElementById("frase").textContent = frase;
+    });
+  </script>
 </body>
 </html>

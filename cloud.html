@@ -25,17 +25,57 @@
   <main>
     <section>
       <h2>Cloud em 2025</h2>
-
       <p><strong>Cloud moderna:</strong> A nuvem agora é distribuída, inteligente e integrada com IA para decisões instantâneas e seguras.</p>
-
       <p>Em 2025, a computação em nuvem cresce 39% no Brasil, impulsionada pela digitalização acelerada. Plataformas como AWS, Azure e Google Cloud lideram com soluções híbridas e integração com IA. A tendência é migrar para arquiteturas serverless e edge computing, reduzindo latência e otimizando decisões em tempo real.</p>
-
       <img src="imagens/cloud2025.jpg" alt="Infraestrutura de computação em nuvem moderna" style="width:100%; max-width:600px; margin-top:1rem;" />
+    </section>
+
+    <section>
+      <h2>Principais benefícios da nuvem</h2>
+      <ul>
+        <li>☁️ Escalabilidade sob demanda</li>
+        <li>🔐 Segurança avançada com criptografia e autenticação multifator</li>
+        <li>💸 Redução de custos operacionais</li>
+        <li>⚡ Alta disponibilidade e recuperação de desastres</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Modelos de serviço</h2>
+      <p>Existem três principais modelos de serviço em nuvem:</p>
+      <ul>
+        <li><strong>IaaS</strong> (Infraestrutura como Serviço): servidores, armazenamento, redes</li>
+        <li><strong>PaaS</strong> (Plataforma como Serviço): ambiente de desenvolvimento e hospedagem</li>
+        <li><strong>SaaS</strong> (Software como Serviço): aplicativos acessíveis via navegador</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Curiosidade</h2>
+      <button onclick="alert('Sabia que o Gmail roda em nuvem desde 2004? ☁️📧')">Clique para saber</button>
+    </section>
+
+    <section>
+      <h2>Frase do dia</h2>
+      <p id="frase-cloud"></p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const frasesCloud = [
+        "A nuvem não é o futuro — é o presente.",
+        "Quem domina cloud, domina a infraestrutura digital.",
+        "Serverless é liberdade para inovar.",
+        "Edge computing aproxima a inteligência do usuário."
+      ];
+      const frase = frasesCloud[Math.floor(Math.random() * frasesCloud.length)];
+      document.getElementById("frase-cloud").textContent = frase;
+    });
+  </script>
 </body>
 </html>
