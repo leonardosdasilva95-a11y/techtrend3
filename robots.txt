@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leonardosdasilva95-a11y.github.io/techtrends3/sitemap.xml
