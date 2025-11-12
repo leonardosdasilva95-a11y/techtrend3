@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechNow — Blog de Tecnologias</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Blog moderno sobre tecnologias, tendências, tutoriais e análises." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">TechNow</a>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="theme-toggle" aria-label="Alternar tema">🌙</button>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Ideias claras sobre tecnologia moderna</h1>
+      <p>Artigos diretos sobre desenvolvimento, IA, cloud, segurança e tendências — sem ruído.</p>
+      <form class="search" role="search">
+        <input type="search" placeholder="Buscar artigos..." aria-label="Buscar" />
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="posts-grid">
+      <!-- Card 1 -->
+      <article class="post-card">
+        <a href="post.html" class="post-media">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Circuitos e tecnologia" loading="lazy" />
+        </a>
+        <div class="post-content">
+          <a href="post.html" class="post-title">Como a IA está redesenhando o desenvolvimento de software</a>
+          <p class="post-excerpt">Ferramentas de code-assist, geração de testes e refactoring aceleram times sem perder qualidade.</p>
+          <div class="post-meta">
+            <span>IA</span> • <time datetime="2025-11-10">10 Nov 2025</time> • 7 min
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="post-card">
+        <a href="post.html" class="post-media">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Data center e cloud" loading="lazy" />
+        </a>
+        <div class="post-content">
+          <a href="post.html" class="post-title">Cloud 2026: multicloud sem dor</a>
+          <p class="post-excerpt">Práticas para observabilidade, custo e portabilidade que evitam lock-in e retrabalho.</p>
+          <div class="post-meta">
+            <span>Cloud</span> • <time datetime="2025-11-05">5 Nov 2025</time> • 6 min
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="post-card">
+        <a href="post.html" class="post-media">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Código e terminal" loading="lazy" />
+        </a>
+        <div class="post-content">
+          <a href="post.html" class="post-title">Segurança prática para times ágeis</a>
+          <p class="post-excerpt">Threat modeling leve, SAST e secrets scanning integrados ao fluxo sem travar entregas.</p>
+          <div class="post-meta">
+            <span>Segurança</span> • <time datetime="2025-10-28">28 Out 2025</time> • 8 min
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="categorias" class="categories">
+      <h2>Categorias</h2>
+      <ul class="chip-list">
+        <li><a href="#">IA</a></li>
+        <li><a href="#">Cloud</a></li>
+        <li><a href="#">Frontend</a></li>
+        <li><a href="#">Backend</a></li>
+        <li><a href="#">Segurança</a></li>
+        <li><a href="#">DevOps</a></li>
+      </ul>
+    </section>
+
+    <section id="sobre" class="about">
+      <h2>Sobre</h2>
+      <p>Este blog nasce para simplificar decisões técnicas e compartilhar aprendizados de projetos reais. Sem hype — só o que funciona no dia a dia.</p>
+    </section>
+
+    <section id="contato" class="contact">
+      <h2>Contato</h2>
+      <p>Tem uma sugestão ou quer colaborar? Envie um e-mail para voce@exemplo.com.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 TechNow — Feito com HTML, CSS e um pouco de café.</p>
+      <div class="social">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter/X">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
