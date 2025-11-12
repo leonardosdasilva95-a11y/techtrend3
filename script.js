@@ -22,3 +22,21 @@ document.querySelector('.search')?.addEventListener('submit', (e) => {
   const q = e.currentTarget.querySelector('input')?.value?.trim();
   if (q) alert(`Buscar por: ${q} (implemente sua lógica aqui)`);
 });
+
+// Filtro por categoria
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+const cards = document.querySelectorAll(".card");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const category = button.getAttribute("data-category");
+
+    cards.forEach(card => {
+      if (category === "all") {
+        card.style.display = "block";
+      } else {
+        card.style.display = card.classList.contains(category) ? "block" : "none";
+      }
+    });
+  });
+});
