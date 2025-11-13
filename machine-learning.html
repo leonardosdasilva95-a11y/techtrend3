@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entenda o que é Machine Learning com uma explicação simples e animação interativa." />
+  <meta name="author" content="Leonardo da Silva" />
+  <title>Machine Learning — TechTrends 3</title>
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <style>
+    .ml {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .modelo {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      flex-wrap: wrap;
+    }
+
+    .bloco {
+      width: 100px;
+      height: 100px;
+      background-color: #00bcd4;
+      color: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-weight: bold;
+      animation: moverBloco 4s infinite alternate ease-in-out;
+    }
+
+    @keyframes moverBloco {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(120px); }
+    }
+
+    .explicacao {
+      margin-top: 2rem;
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #e0e0e0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TechTrends 3</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="ia.html">IA</a></li>
+        <li><a href="cloud.html">Cloud</a></li>
+        <li><a href="seguranca.html">Segurança</a></li>
+        <li><a href="post.html">Posts</a></li>
+        <li><a href="tecnologia.html">Tecnologia</a></li>
+        <li><a href="interativo.html">Interativo</a></li>
+        <li><a href="ia-animacoes.html">IA Animada</a></li>
+        <li><a href="visao.html">Visão Computacional</a></li>
+        <li><a href="machine-learning.html">Machine Learning</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="ml">
+    <h2>O que é Machine Learning?</h2>
+    <p>Machine Learning (Aprendizado de Máquina) é uma área da Inteligência Artificial que permite que sistemas aprendam com dados e melhorem com a experiência — sem serem programados diretamente para cada tarefa.</p>
+
+    <h2>Como funciona?</h2>
+    <p>O sistema recebe dados de entrada, identifica padrões e gera previsões ou decisões com base nesses padrões. Quanto mais dados, melhor o aprendizado.</p>
+
+    <div class="modelo">
+      <div class="bloco">Dados</div>
+      <div class="bloco">Padrões</div>
+      <div class="bloco">Previsões</div>
+    </div>
+
+    <div class="explicacao">
+      <p>Essa animação representa o fluxo de aprendizado: os dados entram, o modelo aprende padrões e gera previsões. É assim que funcionam sistemas como recomendações de filmes, reconhecimento de voz e diagnósticos médicos com IA.</p>
+    </div>
+
+    <h2>Curiosidade</h2>
+    <p>O termo “Machine Learning” foi usado pela primeira vez em 1959 por Arthur Samuel, que criou um programa que aprendia a jogar damas.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
