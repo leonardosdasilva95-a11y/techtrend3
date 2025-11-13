@@ -3,79 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Página sobre Computação em Nuvem no TechTrends 3." />
+  <meta name="description" content="Entenda o que é Computação em Nuvem, como funciona e seus benefícios." />
   <meta name="author" content="Leonardo da Silva" />
   <title>Computação em Nuvem — TechTrends 3</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
-<body class="dark-theme">
+<body>
   <header>
-    <h1>Computação em Nuvem</h1>
+    <h1>TechTrends 3</h1>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="ia.html">IA</a></li>
+        <li><a href="cloud.html">Cloud</a></li>
         <li><a href="seguranca.html">Segurança</a></li>
         <li><a href="post.html">Posts</a></li>
+        <li><a href="tecnologia.html">Tecnologia</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Cloud em 2025</h2>
-      <p><strong>Cloud moderna:</strong> A nuvem agora é distribuída, inteligente e integrada com IA para decisões instantâneas e seguras.</p>
-      <p>Em 2025, a computação em nuvem cresce 39% no Brasil, impulsionada pela digitalização acelerada. Plataformas como AWS, Azure e Google Cloud lideram com soluções híbridas e integração com IA. A tendência é migrar para arquiteturas serverless e edge computing, reduzindo latência e otimizando decisões em tempo real.</p>
-      <img src="imagens/cloud2025.jpg" alt="Infraestrutura de computação em nuvem moderna" style="width:100%; max-width:600px; margin-top:1rem;" />
-    </section>
+    <section class="cloud">
+      <h2>O que é Computação em Nuvem?</h2>
+      <p>Computação em nuvem é a entrega de serviços de tecnologia — como armazenamento, processamento e redes — pela internet, sem depender de servidores locais.</p>
 
-    <section>
-      <h2>Principais benefícios da nuvem</h2>
+      <h2>Como funciona?</h2>
+      <p>Os dados e sistemas são hospedados em servidores remotos, acessados via internet. Plataformas como AWS, Azure e Google Cloud oferecem infraestrutura escalável e segura.</p>
+
+      <h2>Principais modelos</h2>
       <ul>
-        <li>☁️ Escalabilidade sob demanda</li>
-        <li>🔐 Segurança avançada com criptografia e autenticação multifator</li>
-        <li>💸 Redução de custos operacionais</li>
-        <li>⚡ Alta disponibilidade e recuperação de desastres</li>
+        <li><strong>IaaS (Infraestrutura como Serviço):</strong> servidores, redes e armazenamento sob demanda.</li>
+        <li><strong>PaaS (Plataforma como Serviço):</strong> ambiente para desenvolvimento de aplicativos.</li>
+        <li><strong>SaaS (Software como Serviço):</strong> softwares acessíveis via navegador, como e-mail e CRM.</li>
       </ul>
-    </section>
 
-    <section>
-      <h2>Modelos de serviço</h2>
-      <p>Existem três principais modelos de serviço em nuvem:</p>
+      <h2>Vantagens da nuvem</h2>
       <ul>
-        <li><strong>IaaS</strong> (Infraestrutura como Serviço): servidores, armazenamento, redes</li>
-        <li><strong>PaaS</strong> (Plataforma como Serviço): ambiente de desenvolvimento e hospedagem</li>
-        <li><strong>SaaS</strong> (Software como Serviço): aplicativos acessíveis via navegador</li>
+        <li>Redução de custos com hardware</li>
+        <li>Escalabilidade e flexibilidade</li>
+        <li>Backup automático e segurança</li>
+        <li>Acesso remoto de qualquer lugar</li>
       </ul>
-    </section>
 
-    <section>
       <h2>Curiosidade</h2>
-      <button onclick="alert('Sabia que o Gmail roda em nuvem desde 2004? ☁️📧')">Clique para saber</button>
-    </section>
-
-    <section>
-      <h2>Frase do dia</h2>
-      <p id="frase-cloud"></p>
+      <p>O termo “cloud computing” surgiu nos anos 1990, mas só se popularizou com o lançamento da Amazon Web Services em 2006.</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const frasesCloud = [
-        "A nuvem não é o futuro — é o presente.",
-        "Quem domina cloud, domina a infraestrutura digital.",
-        "Serverless é liberdade para inovar.",
-        "Edge computing aproxima a inteligência do usuário."
-      ];
-      const frase = frasesCloud[Math.floor(Math.random() * frasesCloud.length)];
-      document.getElementById("frase-cloud").textContent = frase;
-    });
-  </script>
 </body>
 </html>
