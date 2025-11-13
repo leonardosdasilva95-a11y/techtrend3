@@ -8,7 +8,7 @@
   <meta name="google-site-verification" content="auVCC-SdekNOMpSEHSTtW8HOPOLgXL8yNQ5J7pkEpe0" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <title>TechTrends 3 — Início</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <header>
@@ -51,6 +51,10 @@
       <h2>Frase do dia</h2>
       <p id="frase-index"></p>
     </section>
+
+    <section id="animacao-container">
+      <div id="bola"></div>
+    </section>
   </main>
 
   <footer>
@@ -82,6 +86,24 @@
         const isDark = document.body.classList.contains("dark-theme");
         localStorage.setItem("theme", isDark ? "dark" : "light");
       });
+
+      // Animação da bolinha
+      const bola = document.getElementById("bola");
+      if (bola) {
+        let direcao = 1;
+        let posicao = 0;
+
+        function animar() {
+          posicao += direcao * 2;
+          if (posicao > 300 || posicao < 0) {
+            direcao *= -1;
+          }
+          bola.style.left = posicao + "px";
+          requestAnimationFrame(animar);
+        }
+
+        animar();
+      }
     });
   </script>
 </body>
