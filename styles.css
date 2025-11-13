@@ -19,8 +19,7 @@ body {
 }
 
 .dark-theme {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  filter: brightness(0.8) contrast(1.2);
 }
 
 @keyframes gradientMove {
