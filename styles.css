@@ -16,10 +16,32 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 .dark-theme {
-  filter: brightness(0.8) contrast(1.2);
+  background: #121212;
+  color: var(--text-color);
+}
+
+.dark-theme header,
+.dark-theme footer {
+  background-color: #1a1a1a;
+}
+
+.dark-theme .card {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.dark-theme nav a {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.dark-theme nav a:hover {
+  background-color: var(--accent-color);
+  color: #000;
 }
 
 @keyframes gradientMove {
