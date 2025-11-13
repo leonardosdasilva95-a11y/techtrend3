@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entenda como funciona a Visão Computacional com animações interativas." />
+  <meta name="author" content="Leonardo da Silva" />
+  <title>Visão Computacional — TechTrends 3</title>
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <style>
+    .visao {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .scanner {
+      width: 300px;
+      height: 200px;
+      border: 2px solid #00bcd4;
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #121212;
+    }
+
+    .linha {
+      width: 100%;
+      height: 4px;
+      background-color: #00bcd4;
+      position: absolute;
+      top: 0;
+      animation: scan 3s infinite linear;
+    }
+
+    @keyframes scan {
+      0% { top: 0; }
+      100% { top: 196px; }
+    }
+
+    .explicacao {
+      margin-top: 2rem;
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #e0e0e0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TechTrends 3</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="ia.html">IA</a></li>
+        <li><a href="cloud.html">Cloud</a></li>
+        <li><a href="seguranca.html">Segurança</a></li>
+        <li><a href="post.html">Posts</a></li>
+        <li><a href="tecnologia.html">Tecnologia</a></li>
+        <li><a href="interativo.html">Interativo</a></li>
+        <li><a href="ia-animacoes.html">IA Animada</a></li>
+        <li><a href="visao.html">Visão Computacional</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="visao">
+    <h2>O que é Visão Computacional?</h2>
+    <p>Visão Computacional é uma área da Inteligência Artificial que permite que máquinas “vejam” e interpretem imagens e vídeos como seres humanos.</p>
+
+    <h2>Como funciona?</h2>
+    <p>Ela usa algoritmos para detectar padrões, identificar objetos, reconhecer rostos e até entender expressões. É aplicada em carros autônomos, segurança, medicina e muito mais.</p>
+
+    <div class="scanner">
+      <div class="linha"></div>
+    </div>
+
+    <div class="explicacao">
+      <p>A animação acima simula um scanner visual, como os usados em sistemas de reconhecimento facial. A linha representa o processo de leitura da imagem, linha por linha, para extrair informações.</p>
+    </div>
+
+    <h2>Curiosidade</h2>
+    <p>O primeiro sistema de reconhecimento facial foi desenvolvido nos anos 1960, mas só se popularizou com o avanço da IA em smartphones.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
