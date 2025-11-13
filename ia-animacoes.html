@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Animações interativas para entender como funciona a Inteligência Artificial." />
+  <meta name="author" content="Leonardo da Silva" />
+  <title>Animações com IA — TechTrends 3</title>
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <style>
+    .ia-animacoes {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .neuron {
+      width: 20px;
+      height: 20px;
+      background-color: #00bcd4;
+      border-radius: 50%;
+      position: absolute;
+      animation: pulsar 2s infinite ease-in-out;
+    }
+
+    @keyframes pulsar {
+      0% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.5); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.5; }
+    }
+
+    #rede-neural {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      margin: 2rem auto;
+      background-color: #121212;
+      border: 2px solid #00bcd4;
+      border-radius: 10px;
+    }
+
+    .explicacao {
+      margin-top: 2rem;
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #e0e0e0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TechTrends 3</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="ia.html">IA</a></li>
+        <li><a href="cloud.html">Cloud</a></li>
+        <li><a href="seguranca.html">Segurança</a></li>
+        <li><a href="post.html">Posts</a></li>
+        <li><a href="tecnologia.html">Tecnologia</a></li>
+        <li><a href="interativo.html">Interativo</a></li>
+        <li><a href="ia-animacoes.html">IA Animada</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="ia-animacoes">
+    <h2>Como funciona uma Rede Neural?</h2>
+    <div id="rede-neural">
+      <div class="neuron" style="top:20px; left:40px;"></div>
+      <div class="neuron" style="top:60px; left:100px;"></div>
+      <div class="neuron" style="top:100px; left:160px;"></div>
+      <div class="neuron" style="top:140px; left:220px;"></div>
+    </div>
+
+    <div class="explicacao">
+      <p>As redes neurais artificiais são inspiradas no cérebro humano. Cada "neurônio" recebe informações, processa e envia para o próximo. Essa animação mostra como os dados fluem entre camadas de uma rede neural.</p>
+    </div>
+
+    <h2>Curiosidade</h2>
+    <p>O algoritmo de redes neurais profundas é o que permite que IA reconheça rostos, traduza idiomas e até crie imagens.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
