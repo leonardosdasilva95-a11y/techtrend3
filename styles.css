@@ -8,14 +8,19 @@
   --font-family: 'Orbitron', sans-serif;
 }
 
-body.dark-theme {
+body {
+  font-family: var(--font-family);
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   background-size: 400% 400%;
   animation: gradientMove 12s ease infinite;
   color: var(--text-color);
-  font-family: var(--font-family);
   margin: 0;
   padding: 0;
+}
+
+.dark-theme {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 @keyframes gradientMove {
