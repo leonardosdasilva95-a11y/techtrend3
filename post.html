@@ -2,116 +2,77 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Curiosidades e animações sobre tecnologia para aprender de forma divertida." />
+  <meta name="author" content="Leonardo da Silva" />
   <title>Posts — TechTrends 3</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <style>
+    .curiosidades {
+      padding: 2rem;
+    }
+
+    .curiosidades h2 {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .curiosidades ul {
+      list-style: square;
+      padding-left: 1.5rem;
+    }
+
+    #animacao-bolinha {
+      width: 40px;
+      height: 40px;
+      background-color: #00bcd4;
+      border-radius: 50%;
+      position: relative;
+      animation: mover 3s infinite alternate ease-in-out;
+      margin: 2rem auto;
+    }
+
+    @keyframes mover {
+      0% { left: 0; }
+      100% { left: 300px; }
+    }
+  </style>
 </head>
-<body class="dark-theme">
+<body>
   <header>
-    <h1>Posts e Tendências</h1>
+    <h1>TechTrends 3</h1>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="ia.html">IA</a></li>
         <li><a href="cloud.html">Cloud</a></li>
         <li><a href="seguranca.html">Segurança</a></li>
+        <li><a href="post.html">Posts</a></li>
+        <li><a href="tecnologia.html">Tecnologia</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Animação com JavaScript</h2>
-      <p>Veja abaixo uma animação simples feita com HTML, CSS e JavaScript:</p>
-      <div id="animacao-container">
-        <div id="bola"></div>
-      </div>
-    </section>
-
-    <section>
-      <h2>O que é Java?</h2>
-      <p>Java é uma linguagem de programação criada em 1995 pela Sun Microsystems. Ela é orientada a objetos, multiplataforma e amplamente usada no desenvolvimento de aplicações web, móveis e corporativas.</p>
-    </section>
-
-    <section>
-      <h2>Por que escolher Java?</h2>
+    <section class="curiosidades">
+      <h2>Curiosidades sobre Tecnologia</h2>
       <ul>
-        <li>☕ Portabilidade: roda em qualquer sistema com máquina virtual Java (JVM)</li>
-        <li>🔒 Segurança: possui recursos integrados para proteger aplicações</li>
-        <li>⚙️ Escalabilidade: ideal para sistemas grandes e complexos</li>
-        <li>🌐 Comunidade ativa: milhares de bibliotecas e frameworks disponíveis</li>
+        <li>O primeiro e-mail foi enviado em 1971 por Ray Tomlinson.</li>
+        <li>O Google foi originalmente chamado de “Backrub”.</li>
+        <li>O primeiro celular pesava mais de 1 kg e foi lançado em 1983.</li>
+        <li>O emoji mais usado do mundo é 😂.</li>
+        <li>O primeiro site da história ainda está no ar: <a href="http://info.cern.ch" target="_blank">info.cern.ch</a></li>
       </ul>
     </section>
 
     <section>
-      <h2>Onde o Java é usado?</h2>
-      <p>Java está presente em sistemas bancários, aplicativos Android, servidores web, jogos, e até em dispositivos embarcados. Empresas como Netflix, Amazon e LinkedIn utilizam Java em suas infraestruturas.</p>
-    </section>
-
-    <section>
-      <h2>Curiosidade</h2>
-      <button onclick="alert('Java não é café, mas também é viciante! ☕')">Clique para saber</button>
-    </section>
-
-    <section>
-      <h2>Frase do dia</h2>
-      <p id="frase"></p>
+      <h2 style="text-align:center;">Animação: Bolinha em movimento</h2>
+      <div id="animacao-bolinha"></div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const body = document.body;
-
-      // Botão para alternar tema
-      const toggle = document.createElement("button");
-      toggle.textContent = "Alternar tema";
-      toggle.style.position = "fixed";
-      toggle.style.bottom = "1rem";
-      toggle.style.right = "1rem";
-      toggle.style.padding = "0.5rem 1rem";
-      toggle.style.backgroundColor = "#00bcd4";
-      toggle.style.color = "#121212";
-      toggle.style.border = "none";
-      toggle.style.borderRadius = "5px";
-      toggle.style.cursor = "pointer";
-
-      toggle.onclick = () => {
-        body.classList.toggle("dark-theme");
-      };
-
-      document.body.appendChild(toggle);
-
-      // Animação da bolinha
-      const bola = document.getElementById("bola");
-      let direcao = 1;
-      let posicao = 0;
-
-      function animar() {
-        posicao += direcao * 2;
-        if (posicao > 300 || posicao < 0) {
-          direcao *= -1;
-        }
-        bola.style.left = posicao + "px";
-        requestAnimationFrame(animar);
-      }
-
-      animar();
-
-      // Frase do dia
-      const frases = [
-        "Código limpo é poesia em movimento.",
-        "Java é poderoso, confiável e está em todo lugar.",
-        "Quem domina Java, domina o mercado.",
-        "Persistência é a chave para dominar qualquer linguagem."
-      ];
-      const frase = frases[Math.floor(Math.random() * frases.length)];
-      document.getElementById("frase").textContent = frase;
-    });
-  </script>
 </body>
 </html>
