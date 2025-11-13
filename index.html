@@ -8,11 +8,9 @@
   <meta name="google-site-verification" content="auVCC-SdekNOMpSEHSTtW8HOPOLgXL8yNQ5J7pkEpe0" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <title>TechTrends 3 — Início</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
-<body class="dark-theme">
+<body>
   <header>
     <h1>TechTrends 3</h1>
     <nav>
@@ -23,6 +21,7 @@
         <li><a href="post.html">Posts</a></li>
       </ul>
     </nav>
+    <button id="toggle-theme" style="margin-top: 1rem;">Alternar tema</button>
   </header>
 
   <main>
@@ -60,6 +59,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Frase do dia
       const frasesIndex = [
         "Tecnologia é ponte, não barreira.",
         "O futuro é digital — e começa agora.",
@@ -68,6 +68,20 @@
       ];
       const frase = frasesIndex[Math.floor(Math.random() * frasesIndex.length)];
       document.getElementById("frase-index").textContent = frase;
+
+      // Tema salvo no navegador
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-theme");
+      }
+
+      // Alternar tema
+      const toggleBtn = document.getElementById("toggle-theme");
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+        const isDark = document.body.classList.contains("dark-theme");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
     });
   </script>
 </body>
