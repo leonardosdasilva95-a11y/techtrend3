@@ -3,154 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Página inicial do TechTrends 3." />
-  <meta name="author" content="Leonardo da Silva" />
-  <meta name="google-site-verification" content="auVCC-SdekNOMpSEHSTtW8HOPOLgXL8yNQ5J7pkEpe0" />
-  <meta name="google-adsense-account" content="ca-pub-4711632282164655" />
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <title>TechTrends 3 — Início</title>
-  <link rel="stylesheet" href="styles.css?v=4" />
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4711632282164655"
-    crossorigin="anonymous"></script>
+  <title>TechTrends 3 — Inovação e Tecnologia</title>
+  <link rel="stylesheet" href="styles.css?v=5" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #1f2d3d; color: white; padding: 20px; }
+    nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; }
+    nav ul li { margin-right: 15px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+    .banner { background: url('banner.jpg') center/cover no-repeat; color: white; padding: 80px 20px; text-align: center; }
+    .banner h2 { font-size: 2.5em; margin-bottom: 10px; }
+    .banner p { font-size: 1.2em; }
+    .section { padding: 40px 20px; background: white; margin-bottom: 20px; }
+    .section h3 { margin-bottom: 20px; color: #1f2d3d; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .card h4 { margin-top: 0; }
+    .card p { font-size: 0.95em; }
+    .card a { display: inline-block; margin-top: 10px; padding: 8px 12px; background: #1f2d3d; color: white; text-decoration: none; border-radius: 4px; }
+    footer { background: #1f2d3d; color: white; text-align: center; padding: 20px; }
+  </style>
 </head>
 <body>
-  <!-- Banner de anúncio fixo no topo -->
-  <div class="ads-top">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-4711632282164655"
-         data-ad-slot="1234567890123"
-         data-ad-format="horizontal"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
   <header>
     <h1>TechTrends 3</h1>
     <nav>
       <ul>
+        <li><a href="index.html">Início</a></li>
         <li><a href="ia.html">IA</a></li>
         <li><a href="cloud.html">Cloud</a></li>
         <li><a href="seguranca.html">Segurança</a></li>
-        <li><a href="post.html">Posts</a></li>
         <li><a href="tecnologia.html">Tecnologia</a></li>
-        <!-- Novos links obrigatórios -->
+        <li><a href="post.html">Posts</a></li>
         <li><a href="sobre.html">Sobre Nós</a></li>
-        <li><a href="privacidade.html">Política de Privacidade</a></li>
+        <li><a href="privacidade.html">Privacidade</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Bem-vindo ao futuro da tecnologia</h2>
-      <img src="imagens/inicio2025.jpg.png" alt="Imagem de boas-vindas ao TechTrends 3" class="boas-vindas" />
-      <p><strong>TechTrends 3:</strong> Um olhar direto para o futuro da tecnologia — simples, acessível e em português.</p>
-      <p>Explore as principais tendências que estão moldando o mundo digital em 2025. De inteligência artificial a segurança da informação, este espaço reúne conteúdo claro e atualizado para quem quer entender o impacto da tecnologia no dia a dia.</p>
-    </section>
+  <section class="banner">
+    <h2>Inovação que transforma</h2>
+    <p>Explore os artigos mais relevantes sobre tecnologia, segurança digital, IA e muito mais.</p>
+  </section>
 
-    <section>
-      <h2>Explore os temas</h2>
-      <ul>
-        <li><strong>IA:</strong> Inteligência artificial que aprende, cria e transforma o mundo.</li>
-        <li><strong>Cloud:</strong> Computação em nuvem que conecta e acelera negócios.</li>
-        <li><strong>Segurança:</strong> Proteção digital para dados, pessoas e empresas.</li>
-        <li><strong>Posts:</strong> Artigos, animações e curiosidades sobre tecnologia.</li>
-        <li><strong>Tecnologia:</strong> Tipos, funcionamento e benefícios das principais inovações.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Curiosidade</h2>
-      <button onclick="alert('Sabia que o termo “Inteligência Artificial” foi criado em 1956? 🤖')">Clique para saber</button>
-    </section>
-
-    <section>
-      <h2>Frase do dia</h2>
-      <p id="frase-index"></p>
-    </section>
-
-    <section id="animacao-container">
-      <div id="bola"></div>
-    </section>
-
-    <section class="sobre">
-      <h2>Sobre o TechTrends 3</h2>
-      <p>O <strong>TechTrends 3</strong> é um projeto criado por Leonardo da Silva com o objetivo de tornar a tecnologia acessível, clara e envolvente para todos. Aqui você encontra conteúdos sobre inteligência artificial, computação em nuvem, segurança digital e muito mais — tudo em português e com estilo futurista.</p>
-      <p>Este site foi desenvolvido com foco em acessibilidade, design responsivo e uma experiência visual moderna. A cada visita, você descobre algo novo sobre o mundo digital que está moldando nosso futuro.</p>
-    </section>
-  </main>
+  <section class="section">
+    <h3>Artigos em Destaque</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>IA no mercado de trabalho</h4>
+        <p>Como a inteligência artificial está moldando empregos e habilidades em 2025.</p>
+        <a href="ia2025.html">Saiba mais</a>
+      </div>
+      <div class="card">
+        <h4>Computação em Nuvem</h4>
+        <p>O papel da nuvem na transformação digital e nos negócios modernos.</p>
+        <a href="cloud2025.html">Saiba mais</a>
+      </div>
+      <div class="card">
+        <h4>Segurança Digital</h4>
+        <p>Protegendo dados e privacidade em um mundo hiperconectado.</p>
+        <a href="seguranca2025.html">Saiba mais</a>
+      </div>
+      <div class="card">
+        <h4>Tecnologia e Inovação</h4>
+        <p>As principais inovações que estão moldando o futuro em 2025.</p>
+        <a href="tecnologia2025.html">Saiba mais</a>
+      </div>
+      <div class="card">
+        <h4>Tendências Digitais</h4>
+        <p>O que está em alta no mundo digital e como isso afeta você.</p>
+        <a href="tendencias2025.html">Saiba mais</a>
+      </div>
+      <div class="card">
+        <h4>Impacto no Dia a Dia</h4>
+        <p>Como a tecnologia transforma hábitos, consumo e qualidade de vida.</p>
+        <a href="impacto2025.html">Saiba mais</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const body = document.body;
-
-      // Aplica tema salvo
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme === "dark") {
-        body.classList.add("dark-theme");
-      }
-
-      // Cria botão de alternância
-      const toggle = document.createElement("button");
-      toggle.textContent = "Alternar tema";
-      toggle.style.position = "fixed";
-      toggle.style.bottom = "1rem";
-      toggle.style.right = "1rem";
-      toggle.style.padding = "0.5rem 1rem";
-      toggle.style.backgroundColor = "#00bcd4";
-      toggle.style.color = "#121212";
-      toggle.style.border = "none";
-      toggle.style.borderRadius = "5px";
-      toggle.style.cursor = "pointer";
-      toggle.style.zIndex = "1000";
-
-      toggle.onclick = () => {
-        body.classList.toggle("dark-theme");
-        const isDark = body.classList.contains("dark-theme");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-        toggle.style.color = isDark ? "#e0e0e0" : "#121212";
-      };
-
-      document.body.appendChild(toggle);
-
-      // Frase do dia
-      const frasesIndex = [
-        "Tecnologia é ponte, não barreira.",
-        "O futuro é digital — e começa agora.",
-        "Quem aprende tecnologia, transforma o mundo.",
-        "Inovação é a linguagem do amanhã."
-      ];
-      const frase = frasesIndex[Math.floor(Math.random() * frasesIndex.length)];
-      document.getElementById("frase-index").textContent = frase;
-
-      // Animação da bolinha
-      const bola = document.getElementById("bola");
-      if (bola) {
-        let direcao = 1;
-        let posicao = 0;
-
-        function animar() {
-          posicao += direcao * 2;
-          if (posicao > 300 || posicao < 0) {
-            direcao *= -1;
-          }
-          bola.style.left = posicao + "px";
-          requestAnimationFrame(animar);
-        }
-
-        animar();
-      }
-    });
-  </script>
 </body>
 </html>
