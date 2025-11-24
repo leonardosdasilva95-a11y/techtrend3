@@ -19,9 +19,15 @@ document.getElementById('btnGerar').addEventListener('click', async () => {
   formData.append('segundos', '3');
   formData.append('fps', '30');
 
+  // Detecta se está rodando local ou em produção
+  const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+  const backendURL = isLocal 
+    ? "http://localhost:5000/api/gerar-video" 
+    : "https://SEU_BACKEND_PUBLICO/api/gerar-video"; 
+    // 👉 troque pelo endereço público do backend quando hospedar
+
   try {
-    // Durante desenvolvimento use localhost
-    const resp = await fetch('http://localhost:5000/api/gerar-video', {
+    const resp = await fetch(backendURL, {
       method: 'POST',
       body: formData
     });
