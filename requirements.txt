@@ -4,3 +4,4 @@ pillow
 imageio
 imageio-ffmpeg
 numpy
+gunicorn
