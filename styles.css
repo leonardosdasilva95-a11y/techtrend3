@@ -226,6 +226,45 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
+/* Botões principais (estilo NexusClips) */
+button,
+.google-login {
+  background: var(--accent-color);
+  color: #000;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px; /* arredondado */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+}
+
+button:hover,
+.google-login:hover {
+  background: #00e5ff; /* tom mais vibrante no hover */
+  color: #000;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.6);
+}
+
+/* Botão de ação principal (Hero Section) */
+#btnStart {
+  margin-top: 20px;
+  font-size: 1.2em;
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #00bcd4, #00e5ff);
+  color: #000;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 229, 255, 0.5);
+}
+
+#btnStart:hover {
+  background: linear-gradient(90deg, #00e5ff, #00bcd4);
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 6px 25px rgba(0, 229, 255, 0.7);
+}
+
 /* Animações extras */
 @keyframes fadeIn {
   from { opacity: 0; }

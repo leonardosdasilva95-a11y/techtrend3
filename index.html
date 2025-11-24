@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechTrends 3 — Inovação e Tecnologia</title>
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <title>Gerador de Vídeos 3D com IA</title>
+  <link rel="stylesheet" href="styles.css?v=8" />
 
   <!-- Metatags SEO -->
-  <meta name="description" content="TechTrends 3 — Tendências de tecnologia em 2025: IA, Cloud, Segurança, Educação e Inovação.">
-  <meta name="keywords" content="tecnologia 2025, inteligência artificial, cloud, segurança digital, educação, inovação, futuro digital">
-  <meta name="author" content="TechTrends 3">
+  <meta name="description" content="Gerador de Vídeos 3D com IA — transforme suas imagens em clipes animados.">
+  <meta name="keywords" content="vídeos 3D, inteligência artificial, animação de imagens, IA, parallax, zoom">
+  <meta name="author" content="Projeto IA Vídeos">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph (para redes sociais) -->
-  <meta property="og:title" content="TechTrends 3 — Inovação e Tecnologia">
-  <meta property="og:description" content="Explore artigos sobre IA, Cloud, Segurança, Educação e Inovação em 2025.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gerador de Vídeos 3D com IA">
+  <meta property="og:description" content="Envie uma imagem e gere vídeos animados com efeitos 3D.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://leonardosdasilva95-a11y.github.io/techtrend3/">
-  <meta property="og:image" content="https://leonardosdasilva95-a11y.github.io/techtrend3/logo.png">
+  <meta property="og:url" content="https://SEU_GITHUB_PAGES_URL/">
+  <meta property="og:image" content="logo.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TechTrends 3 — Inovação e Tecnologia">
-  <meta name="twitter:description" content="Explore artigos sobre IA, Cloud, Segurança, Educação e Inovação em 2025.">
-  <meta name="twitter:image" content="https://leonardosdasilva95-a11y.github.io/techtrend3/logo.png">
+  <meta name="twitter:title" content="Gerador de Vídeos 3D com IA">
+  <meta name="twitter:description" content="Transforme imagens em vídeos animados com IA.">
+  <meta name="twitter:image" content="logo.png">
 </head>
 <body>
   <!-- Área de anúncios fixa no topo -->
@@ -32,85 +32,73 @@
   </div>
 
   <header>
-    <h1>TechTrends 3</h1>
+    <h1>Gerador de Vídeos 3D</h1>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
-        <li><a href="ia.html">IA</a></li>
-        <li><a href="cloud.html">Cloud</a></li>
-        <li><a href="seguranca.html">Segurança</a></li>
-        <li><a href="tecnologia.html">Tecnologia</a></li>
-        <li><a href="post.html">Posts</a></li>
-        <li><a href="sobre.html">Sobre Nós</a></li>
         <li><a href="privacidade.html">Privacidade</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Banner principal -->
+  <!-- Hero Section -->
   <section class="banner">
-    <h2>Inovação que transforma</h2>
-    <p>Explore os artigos mais relevantes sobre tecnologia, segurança digital, IA e muito mais.</p>
-    <img src="logo.png" alt="Logo TechTrends" class="boas-vindas" />
+    <h2>Transforme suas imagens em vídeos 3D</h2>
+    <p>Envie uma foto, escolha o efeito e gere seu vídeo animado com IA.</p>
+    <button id="btnStart">Comece agora</button>
+    <img src="logo.png" alt="Logo do Projeto IA Vídeos" class="boas-vindas" />
   </section>
 
-  <!-- Seção de artigos -->
+  <!-- Área principal do gerador -->
   <main>
-    <section class="section">
-      <h3>Artigos em Destaque</h3>
+    <section class="gerador">
+      <h3>Gerador de Vídeos</h3>
+      <input type="file" id="imagem" accept="image/*" />
+      <select id="efeito">
+        <option value="parallax">Parallax 3D</option>
+        <option value="zoom">Zoom</option>
+        <option value="profundidade">Profundidade</option>
+      </select>
+      <button id="btnGerar">Gerar vídeo</button>
+
+      <p id="status"></p>
+      <div id="resultado"></div>
+    </section>
+
+    <!-- Seção de usos -->
+    <section class="usos">
+      <h3>Funciona para qualquer conteúdo</h3>
+      <ul>
+        <li>Fotos pessoais</li>
+        <li>Eventos</li>
+        <li>Gaming</li>
+        <li>Podcasts</li>
+        <li>Tutoriais</li>
+      </ul>
+    </section>
+
+    <!-- Recursos destacados -->
+    <section class="recursos">
+      <h3>O que você pode fazer</h3>
       <div class="card-grid">
-        <div class="card">
-          <h2>IA no mercado de trabalho</h2>
-          <p>Como a inteligência artificial está moldando empregos e habilidades em 2025.</p>
-          <a href="ia2025.html">Ler artigo completo</a>
-        </div>
-        <div class="card">
-          <h2>Computação em Nuvem</h2>
-          <p>O papel da nuvem na transformação digital e nos negócios modernos.</p>
-          <a href="cloud2025.html">Ler artigo completo</a>
-        </div>
-        <div class="card">
-          <h2>Segurança Digital</h2>
-          <p>Protegendo dados e privacidade em um mundo hiperconectado.</p>
-          <a href="seguranca2025.html">Ler artigo completo</a>
-        </div>
-        <div class="card">
-          <h2>Tecnologia e Inovação</h2>
-          <p>As principais inovações que estão moldando o futuro em 2025.</p>
-          <a href="tecnologia2025.html">Ler artigo completo</a>
-        </div>
-        <div class="card">
-          <h2>Tendências Digitais</h2>
-          <p>O que está em alta no mundo digital e como isso afeta você.</p>
-          <a href="tendencias2025.html">Ler artigo completo</a>
-        </div>
-        <div class="card">
-          <h2>Impacto no Dia a Dia</h2>
-          <p>Como a tecnologia transforma hábitos, consumo e qualidade de vida.</p>
-          <a href="impacto2025.html">Ler artigo completo</a>
-        </div>
-        <div class="card">
-          <h2>Educação e Tecnologia</h2>
-          <p>Aprendizado sem fronteiras: como a tecnologia redefine a educação em 2025.</p>
-          <a href="educacao.html">Ler artigo completo</a>
-        </div>
+        <div class="card">Zoom e Parallax 3D</div>
+        <div class="card">Legendas automáticas</div>
+        <div class="card">Formato vertical (Stories/Reels)</div>
+        <div class="card">Compartilhar direto nas redes</div>
       </div>
     </section>
 
-    <!-- Seção institucional -->
-    <section class="sobre">
-      <h2>Sobre o TechTrends 3</h2>
-      <p>
-        O TechTrends 3 é um portal dedicado a explorar as principais tendências tecnológicas de 2025.
-        Nosso objetivo é trazer conteúdo original, acessível e relevante sobre inovação, segurança digital,
-        inteligência artificial e muito mais.
-      </p>
+    <!-- Login simples -->
+    <section class="login">
+      <button class="google-login">Entrar com Google</button>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 TechTrends 3 — Todos os direitos reservados.</p>
+    <p>© 2025 Projeto IA Vídeos — Todos os direitos reservados.</p>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
