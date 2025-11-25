@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gerador de Vídeos 3D com IA</title>
-  <link rel="stylesheet" href="styles.css?v=16" />
+  <link rel="stylesheet" href="styles.css?v=17" />
 </head>
 <body>
   <!-- Área de anúncios fixa no topo -->
@@ -43,6 +43,15 @@
       <button id="btnGerar">Gerar vídeo</button>
       <p id="status"></p>
       <div id="resultado"></div>
+
+      <!-- Área de compartilhamento -->
+      <div id="compartilhar" style="display:none; margin-top:20px;">
+        <h4>Compartilhar vídeo:</h4>
+        <button class="share-btn" id="shareWhats">WhatsApp</button>
+        <button class="share-btn" id="shareFace">Facebook</button>
+        <button class="share-btn" id="shareX">Twitter/X</button>
+        <button class="share-btn" id="shareLinked">LinkedIn</button>
+      </div>
     </div>
   </section>
 
