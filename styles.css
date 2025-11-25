@@ -121,7 +121,6 @@ nav a:hover {
 }
 
 /* Seções */
-/* Seções */
 .section {
   padding: 40px 20px;
   background-color: #1a1a1a;
@@ -129,4 +128,18 @@ nav a:hover {
   border-radius: 12px;
   max-width: 1000px;
   box-shadow: 0 0 20px rgba(0, 188, 212, 0.2);
-}  /* <-- aqui fecha certinho */
+}
+
+/* Gerador escondido com animação */
+#gerador {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

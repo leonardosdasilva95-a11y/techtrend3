@@ -4,26 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gerador de Vídeos 3D com IA</title>
-  <link rel="stylesheet" href="styles.css?v=14" />
-
-  <!-- Metatags SEO -->
-  <meta name="description" content="Gerador de Vídeos 3D com IA — transforme suas imagens em clipes animados.">
-  <meta name="keywords" content="vídeos 3D, inteligência artificial, animação de imagens, IA, parallax, zoom">
-  <meta name="author" content="Projeto IA Vídeos">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Gerador de Vídeos 3D com IA">
-  <meta property="og:description" content="Envie uma imagem e gere vídeos animados com efeitos 3D.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://SEU_GITHUB_PAGES_URL/">
-  <meta property="og:image" content="logo.png">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Gerador de Vídeos 3D com IA">
-  <meta name="twitter:description" content="Transforme imagens em vídeos animados com IA.">
-  <meta name="twitter:image" content="logo.png">
+  <link rel="stylesheet" href="styles.css?v=15" />
 </head>
 <body>
   <!-- Área de anúncios fixa no topo -->
@@ -49,11 +30,24 @@
     <p>Envie uma foto, escolha o efeito e gere seu vídeo animado com IA.</p>
     <button id="btnStart">Comece agora</button>
     <img src="logo.png" alt="Logo do Projeto IA Vídeos" class="boas-vindas" />
+
+    <!-- Gerador escondido -->
+    <div id="gerador" style="display:none; margin-top:20px;">
+      <h3>Gerador de Vídeos</h3>
+      <input type="file" id="imagem" accept="image/*" />
+      <select id="efeito">
+        <option value="parallax">Parallax 3D</option>
+        <option value="zoom">Zoom</option>
+        <option value="profundidade">Profundidade</option>
+      </select>
+      <button id="btnGerar">Gerar vídeo</button>
+      <p id="status"></p>
+      <div id="resultado"></div>
+    </div>
   </section>
 
-  <!-- Área principal reorganizada -->
+  <!-- Seções adicionais -->
   <main>
-    <!-- Seção de usos no topo -->
     <section class="usos section">
       <h3>Funciona para qualquer conteúdo</h3>
       <ul>
@@ -65,7 +59,6 @@
       </ul>
     </section>
 
-    <!-- Recursos destacados logo abaixo -->
     <section class="recursos section">
       <h3>O que você pode fazer</h3>
       <div class="card-grid">
@@ -76,22 +69,6 @@
       </div>
     </section>
 
-    <!-- Gerador de vídeos agora vem depois -->
-    <section class="gerador section">
-      <h3>Gerador de Vídeos</h3>
-      <input type="file" id="imagem" accept="image/*" />
-      <select id="efeito">
-        <option value="parallax">Parallax 3D</option>
-        <option value="zoom">Zoom</option>
-        <option value="profundidade">Profundidade</option>
-      </select>
-      <button id="btnGerar">Gerar vídeo</button>
-
-      <p id="status"></p>
-      <div id="resultado"></div>
-    </section>
-
-    <!-- Login simples -->
     <section class="login section">
       <button class="google-login">Entrar com Google</button>
     </section>
