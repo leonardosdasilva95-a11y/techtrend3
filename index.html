@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gerador de Vídeos 3D com IA</title>
-  <link rel="stylesheet" href="styles.css?v=17" />
+  <link rel="stylesheet" href="styles.css?v=18" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
   <!-- Área de anúncios fixa no topo -->
@@ -27,9 +28,17 @@
   <!-- Hero Section -->
   <section class="banner">
     <h2>Transforme suas imagens em vídeos 3D</h2>
-    <p>Envie uma foto, escolha o efeito e gere seu vídeo animado com IA.</p>
+    <p>Envie uma foto, escolha o efeito ou descreva em texto o que deseja.</p>
     <button id="btnStart">Comece agora</button>
     <img src="logo.png" alt="Logo do Projeto IA Vídeos" class="boas-vindas" />
+
+    <!-- Nova barra de texto dinâmica -->
+    <div class="prompt-box">
+      <h3>Descreva com detalhes como quer seu vídeo 3D</h3>
+      <textarea id="promptInput" placeholder="Ex: Quero transformar minha foto em vídeo 3D com zoom e profundidade"></textarea>
+      <button id="btnPrompt">Interpretar pedido</button>
+      <p id="promptStatus"></p>
+    </div>
 
     <!-- Gerador escondido -->
     <div id="gerador" style="display:none; margin-top:20px;">

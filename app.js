@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultado = document.getElementById("resultado");
   const googleBtn = document.getElementById("googleLogin");
 
+  // Elementos da prompt-box
+  const btnPrompt = document.getElementById("btnPrompt");
+  const promptInput = document.getElementById("promptInput");
+  const promptStatus = document.getElementById("promptStatus");
+
   // Botão "Comece agora" abre/fecha o gerador
   btnStart.addEventListener("click", () => {
     if (gerador.style.display === "none") {
@@ -17,6 +22,27 @@ document.addEventListener("DOMContentLoaded", () => {
       gerador.style.display = "none";
       btnStart.textContent = "Comece agora";
     }
+  });
+
+  // Botão "Interpretar pedido" da prompt-box
+  btnPrompt.addEventListener("click", () => {
+    const pedido = promptInput.value.trim();
+    if (!pedido) {
+      alert("Escreva como você quer seu vídeo 3D.");
+      return;
+    }
+
+    promptStatus.textContent = "⏳ Interpretando seu pedido...";
+
+    // Lógica simples: detecta palavras-chave
+    let efeito = "parallax";
+    if (pedido.toLowerCase().includes("zoom")) efeito = "zoom";
+    if (pedido.toLowerCase().includes("profundidade")) efeito = "profundidade";
+
+    // Aplica efeito no gerador
+    document.getElementById("efeito").value = efeito;
+    gerador.style.display = "block";
+    promptStatus.textContent = "✅ Pedido interpretado! Agora envie sua imagem e clique em 'Gerar vídeo'.";
   });
 
   // Botão "Gerar vídeo"
@@ -82,3 +108,4 @@ document.addEventListener("DOMContentLoaded", () => {
     window.open("https://accounts.google.com/signin", "_blank");
   });
 });
+
