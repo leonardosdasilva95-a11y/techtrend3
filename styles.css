@@ -166,7 +166,7 @@ button:hover {
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
 }
 
-/* Gerador escondido com animação */
+/* Gerador de Vídeos */
 #gerador {
   background-color: #1a1a1a;
   padding: 20px;
@@ -178,6 +178,46 @@ button:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Seção do Gerador de Imagens */
+.imagem {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+  animation: fadeIn 0.6s ease;
+  text-align: center;
+}
+
+.imagem h3 {
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.imagem textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1em;
+  border: 2px solid var(--accent-color);
+  background-color: #121212;
+  color: var(--text-color);
+  resize: none;
+  transition: 0.3s;
+}
+
+.imagem textarea:focus {
+  outline: none;
+  box-shadow: 0 0 15px var(--accent-color);
+  transform: scale(1.02);
+}
+
+#btnImagem {
+  margin-top: 12px;
 }
 
 /* Botão Google */

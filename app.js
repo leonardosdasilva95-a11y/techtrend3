@@ -8,12 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultado = document.getElementById("resultado");
   const googleBtn = document.getElementById("googleLogin");
 
-  // Elementos da prompt-box
+  // Elementos da prompt-box (vídeo)
   const btnPrompt = document.getElementById("btnPrompt");
   const promptInput = document.getElementById("promptInput");
   const promptStatus = document.getElementById("promptStatus");
 
-  // Botão "Comece agora" abre/fecha o gerador
+  // Elementos do gerador de imagens
+  const btnImagem = document.getElementById("btnImagem");
+  const promptImagem = document.getElementById("promptImagem");
+  const statusImagem = document.getElementById("statusImagem");
+  const resultadoImagem = document.getElementById("resultadoImagem");
+
+  // Botão "Comece agora" abre/fecha o gerador de vídeos
   btnStart.addEventListener("click", () => {
     if (gerador.style.display === "none") {
       gerador.style.display = "block";
@@ -24,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Botão "Interpretar pedido" da prompt-box
+  // Botão "Interpretar pedido" da prompt-box (vídeo)
   btnPrompt.addEventListener("click", () => {
     const pedido = promptInput.value.trim();
     if (!pedido) {
@@ -64,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("fps", "30");
 
     try {
-      // Durante desenvolvimento use localhost
       const resp = await fetch("http://localhost:5000/api/gerar-video", {
         method: "POST",
         body: formData,
@@ -103,9 +108,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Botão "Gerar Imagem"
+  btnImagem.addEventListener("click", async () => {
+    const pedido = promptImagem.value.trim();
+    if (!pedido) {
+      alert("Descreva a imagem que deseja gerar.");
+      return;
+    }
+
+    statusImagem.textContent = "⏳ Gerando imagem...";
+
+    try {
+      const resp = await fetch("http://localhost:5000/api/gerar-imagem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: pedido })
+      });
+
+      if (!resp.ok) throw new Error("Falha ao gerar imagem");
+
+      const blob = await resp.blob();
+      const url = URL.createObjectURL(blob);
+
+      resultadoImagem.innerHTML = `<img src="${url}" alt="Imagem gerada" style="max-width:500px; border-radius:12px; box-shadow:0 0 20px rgba(0,229,255,0.4)">`;
+      statusImagem.textContent = "✅ Imagem pronta!";
+    } catch (err) {
+      statusImagem.textContent = "❌ Erro ao gerar imagem.";
+      resultadoImagem.textContent = err.message;
+    }
+  });
+
   // Botão "Entrar com Google"
   googleBtn.addEventListener("click", () => {
     window.open("https://accounts.google.com/signin", "_blank");
   });
 });
-
