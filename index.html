@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gerador de Vídeos e Imagens 3D com IA</title>
+  <title>TechTrend 3 — Gerador de Vídeos e Imagens 3D com IA</title>
 
-  <!-- Fonts do Google (acrescentado) -->
+  <!-- Fonts do Google -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&family=Audiowide&family=Playfair+Display:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20" />
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Área de anúncios fixa no topo -->
@@ -17,9 +17,9 @@
     <p>Espaço reservado para anúncios — AdSense</p>
   </div>
 
-  <!-- Header fixo com menu alinhado -->
+  <!-- Header fixo com menu -->
   <header>
-    <img src="assets/images/logo.png" alt="Logo do Projeto IA Vídeos" class="boas-vindas" />
+    <img src="assets/images/logo.png" alt="Logo do Projeto IA Vídeos" class="logo" />
     <h1>Gerador de Vídeos e Imagens 3D</h1>
     <nav>
       <ul>
@@ -35,7 +35,6 @@
     <h2>Transforme suas ideias em vídeos e imagens 3D</h2>
     <p>Envie uma foto, descreva em texto ou peça uma imagem gerada por IA.</p>
     <button id="btnStart">Comece agora</button>
-    <img src="assets/images/logo.png" alt="Logo do Projeto IA Vídeos" class="boas-vindas" />
 
     <!-- Prompt-box para vídeos -->
     <div class="prompt-box">
@@ -58,7 +57,7 @@
       <p id="status"></p>
       <div id="resultado"></div>
 
-      <!-- Área de compartilhamento com ícones -->
+      <!-- Área de compartilhamento -->
       <div id="compartilhar" style="display:none; margin-top:20px;">
         <h4>Compartilhar vídeo:</h4>
         <button class="share-btn">
@@ -77,7 +76,7 @@
     </div>
   </section>
 
-  <!-- Nova seção: Gerador de Imagens -->
+  <!-- Gerador de Imagens -->
   <section class="imagem section">
     <h3>Gerador de Imagens com IA</h3>
     <textarea id="promptImagem" placeholder="Descreva a imagem que deseja gerar"></textarea>
@@ -120,6 +119,7 @@
     <p>© 2025 Projeto IA Vídeos — Todos os direitos reservados.</p>
   </footer>
 
+  <!-- JS -->
   <script src="app.js"></script>
 </body>
 </html>
