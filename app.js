@@ -90,3 +90,13 @@ const navMenu = document.getElementById("navMenu");
 menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("show");
 });
+// =============================
+// MENU HAMBURGUER RESPONSIVO
+// =============================
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu").querySelector("ul");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});

@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contato — TechTrends 3</title>
-  <link rel="stylesheet" href="styles.css?v=4" />
-
-  <!-- Metatags SEO -->
-  <meta name="description" content="Entre em contato com o TechTrends 3: sugestões, parcerias e dúvidas sobre tecnologia e inovação.">
-  <meta name="keywords" content="contato TechTrends 3, email, parcerias, sugestões, dúvidas, tecnologia, inovação">
-  <meta name="author" content="TechTrends 3">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph (para redes sociais) -->
-  <meta property="og:title" content="Contato — TechTrends 3">
-  <meta property="og:description" content="Entre em contato com o TechTrends 3: sugestões, parcerias e dúvidas sobre tecnologia e inovação.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://leonardosdasilva95-a11y.github.io/techtrend3/contato.html">
-  <meta property="og:image" content="https://leonardosdasilva95-a11y.github.io/techtrend3/images/contato.png">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contato — TechTrends 3">
-  <meta name="twitter:description" content="Entre em contato com o TechTrends 3: sugestões, parcerias e dúvidas sobre tecnologia e inovação.">
-  <meta name="twitter:image" content="https://leonardosdasilva95-a11y.github.io/techtrend3/images/contato.png">
+  <meta charset="UTF-8">
+  <title>Contato - TechTrend3</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>TechTrends 3</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre Nós</a></li>
-        <li><a href="privacidade.html">Política de Privacidade</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+  <section class="section">
+    <h1>Fale Conosco</h1>
+    <p>Use o formulário abaixo para enviar suas dúvidas, sugestões ou solicitações relacionadas ao <strong>TechTrend3</strong>.</p>
 
-  <main class="sobre">
-    <h2>Contato</h2>
-    <p>Quer falar com a equipe do TechTrends 3? Use os canais abaixo:</p>
-    <ul>
-      <li>Email: <a href="mailto:contato@techtrends3.com">contato@techtrends3.com</a></li>
-      <li>GitHub: <a href="https://github.com/leonardosdasilva95-a11y" target="_blank">Leonardo da Silva</a></li>
-    </ul>
-    <p>Estamos sempre abertos para sugestões, parcerias e dúvidas!</p>
-  </main>
+    <!-- Formulário integrado ao Formspree -->
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/movowrza" method="POST">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" class="input" required>
 
-  <footer>
-    <p>&copy; 2025 TechTrends 3 — Todos os direitos reservados.</p>
-  </footer>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" class="input" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" class="input" rows="5" required></textarea>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <!-- Mensagem de status -->
+    <p id="formStatus" style="margin-top:15px; font-weight:600;"></p>
+
+    <p>Ou entre em contato diretamente pelo e-mail: <strong>contato@techtrend3.com</strong></p>
+  </section>
+
+  <script>
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.style.display = "block";
+    status.textContent = "Enviando mensagem... ⏳";
+    status.className = "form-status loading";
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        status.textContent = "Mensagem enviada com sucesso ✅";
+        status.className = "form-status success";
+        form.reset();
+      } else {
+        status.textContent = "Erro ao enviar ❌. Tente novamente.";
+        status.className = "form-status error";
+      }
+    } catch (error) {
+      status.textContent = "Erro de conexão ❌. Verifique sua internet.";
+      status.className = "form-status error";
+    }
+  });
+</script>
+
 </body>
 </html>

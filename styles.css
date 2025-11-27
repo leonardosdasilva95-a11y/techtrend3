@@ -6,13 +6,20 @@
   --bg-color: #121212;
   --text-color: #e0e0e0;
   --card-bg: #1e1e1e;
-  --accent-color: #00e5ff;
+
+  /* Paleta refinada */
+  --accent-color: #00e5ff;        /* Primário neon */
+  --accent-color-alt: #00bcd4;    /* Variação suave */
+  --accent-secondary: #ff4081;    /* Rosa vibrante */
+
+  /* Fontes (mantidas) */
   --font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
   --font-body: 'Noto Sans JP', 'Montserrat', sans-serif;
   --font-titles: 'Orbitron', 'Audiowide', sans-serif;
   --font-subtitles: 'Playfair Display', serif;
   --font-logo: 'Audiowide', 'Orbitron', sans-serif;
 }
+
 
 /* Reset básico */
 * {
@@ -478,4 +485,423 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* ============================= */
+/* LAYOUT MODERNO E ANIMAÇÕES */
+/* ============================= */
+
+/* Variáveis de espaçamento */
+:root {
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+}
+
+/* Cards com micro-animações */
+.card {
+  background-color: var(--card-bg);
+  padding: var(--space-md);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.4);
+}
+
+/* Botões pulsantes */
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(0,229,255,0.4); }
+  50% { box-shadow: 0 0 20px rgba(0,229,255,0.8); }
+  100% { box-shadow: 0 0 10px rgba(0,229,255,0.4); }
+}
+
+button.primary {
+  animation: pulse 2s infinite;
+}
+
+/* Seções alternadas com gradiente */
+.section.alt {
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+}
+
+/* Footer refinado */
+footer {
+  text-align: center;
+  padding: var(--space-md);
+  font-size: 0.9em;
+  color: #aaa;
+  background-color: #181818;
+  border-top: 1px solid rgba(0,229,255,0.2);
+}
+/* ============================= */
+/* COMPONENTES REUTILIZÁVEIS */
+/* ============================= */
+
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  padding: var(--space-md);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0,229,255,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h4 {
+  font-family: var(--font-titles);
+  margin-bottom: var(--space-sm);
+  color: var(--accent-color);
+}
+
+.card p {
+  font-family: var(--font-body);
+  font-size: 0.95em;
+  color: var(--text-color);
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,229,255,0.4);
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Botão primário */
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-color-alt));
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0,229,255,0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,229,255,0.6);
+}
+
+/* Botão secundário */
+.btn-secondary {
+  background: linear-gradient(90deg, var(--accent-secondary), #9c27b0);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255,64,129,0.4);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,64,129,0.6);
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid var(--accent-color);
+  background-color: #121212;
+  color: var(--text-color);
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 15px var(--accent-color);
+  transform: scale(1.02);
+}
+/* ============================= */
+/* FOOTER ATUALIZADO */
+/* ============================= */
+
+footer {
+  background-color: #181818;
+  color: #aaa;
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  border-top: 1px solid rgba(0,229,255,0.2);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.footer-links a {
+  margin: 0 12px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  color: var(--accent-secondary);
+}
+
+.social-icons a {
+  margin: 0 8px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+/* ============================= */
+/* FOOTER RESPONSIVO */
+/* ============================= */
+
+footer {
+  background-color: #181818;
+  color: #aaa;
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  border-top: 1px solid rgba(0,229,255,0.2);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  color: var(--accent-secondary);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+}
+/* ============================= */
+/* HEADER RESPONSIVO */
+/* ============================= */
+
+header {
+  background-color: #121212;
+  border-bottom: 1px solid rgba(0,229,255,0.2);
+  padding: var(--space-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+nav a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #181818;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: var(--space-md);
+    border: 1px solid rgba(0,229,255,0.2);
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Animação suave */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ============================= */
+/* ANIMAÇÃO HAMBURGUER → X */
+/* ============================= */
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+/* ============================= */
+/* STATUS DO FORMULÁRIO DE CONTATO */
+/* ============================= */
+
+.form-status {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  display: none; /* só aparece quando atualizado */
+}
+
+.form-status.success {
+  background-color: #e6ffed;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+.form-status.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #c62828;
+}
+
+.form-status.loading {
+  background-color: #fffde7;
+  color: #f9a825;
+  border: 1px solid #f9a825;
+}
+/* ============================= */
+/* ANIMAÇÃO DE STATUS DO FORMULÁRIO */
+/* ============================= */
+
+.form-status {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.form-status.show {
+  opacity: 1;
+}
+
+.form-status.success {
+  background-color: #e6ffed;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+.form-status.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #c62828;
+}
+
+.form-status.loading {
+  background-color: #fffde7;
+  color: #f9a825;
+  border: 1px solid #f9a825;
 }

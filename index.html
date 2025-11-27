@@ -18,25 +18,30 @@
   </div>
 
   <!-- Header fixo com menu hamburguer -->
-<!-- Header fixo com menu hamburguer -->
-<header>
-  <img src="assets/images/logo.png" alt="Logo do Projeto IA Vídeos" class="logo" />
-  <h1>Gerador de Vídeos e Imagens 3D</h1>
+  <header>
+  <div class="header-content">
+    <img src="assets/images/logo.png" alt="Logo do Projeto IA Vídeos" class="logo" />
+    <h1>Gerador de Vídeos e Imagens 3D</h1>
 
-  <!-- Botão hamburguer (visível em mobile/tablet) -->
-  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-    ☰
-  </button>
+    <!-- Botão hamburguer -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <!-- Navegação -->
-  <nav id="navMenu">
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="privacidade.html">Privacidade</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
+
+    <!-- Navegação -->
+    <nav id="navMenu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="privacidade.html">Privacidade</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
 
   <!-- Hero Section -->
   <section class="banner">
@@ -123,9 +128,55 @@
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Projeto IA Vídeos — Todos os direitos reservados.</p>
-  </footer>
+  <!-- Seção de componentes reutilizáveis -->
+  <section class="section alt">
+    <h2>Recursos em Destaque</h2>
+    <div class="card-grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <h4>Geração de Vídeos</h4>
+        <p>Crie vídeos com inteligência artificial de forma rápida e prática.</p>
+        <button class="btn btn-primary">Experimentar</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <h4>Imagens 3D</h4>
+        <p>Transforme suas ideias em imagens 3D impressionantes.</p>
+        <button class="btn btn-secondary">Explorar</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <h4>Compartilhamento</h4>
+        <p>Compartilhe suas criações com amigos e redes sociais.</p>
+        <input type="text" class="input" placeholder="Digite seu link...">
+      </div>
+    </div>
+  </section>
+
+  <<footer>
+  <div class="footer-content">
+    <!-- Links rápidos -->
+    <nav class="footer-links">
+      <a href="index.html">Início</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+    <!-- Redes sociais -->
+    <div class="social-icons">
+      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter/X" /></a>
+      <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram" /></a>
+    </div>
+  </div>
+
+  <p>© 2025 Projeto IA Vídeos — Todos os direitos reservados.</p>
+</footer>
+
 
   <!-- JS -->
   <script src="app.js"></script>
