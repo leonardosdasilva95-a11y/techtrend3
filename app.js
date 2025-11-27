@@ -83,3 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Aqui você pode integrar com Google Identity Services
   });
 });
+// Menu hamburguer responsivo
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
