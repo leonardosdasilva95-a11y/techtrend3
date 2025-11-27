@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gerador de Vídeos e Imagens 3D com IA</title>
-  <link rel="stylesheet" href="styles.css?v=19" />
+
+  <!-- Fonts do Google (acrescentado) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&family=Audiowide&family=Playfair+Display:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20" />
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
@@ -15,6 +19,7 @@
 
   <!-- Header fixo com menu alinhado -->
   <header>
+    <img src="assets/images/logo.png" alt="Logo do Projeto IA Vídeos" class="boas-vindas" />
     <h1>Gerador de Vídeos e Imagens 3D</h1>
     <nav>
       <ul>
@@ -30,7 +35,7 @@
     <h2>Transforme suas ideias em vídeos e imagens 3D</h2>
     <p>Envie uma foto, descreva em texto ou peça uma imagem gerada por IA.</p>
     <button id="btnStart">Comece agora</button>
-    <img src="logo.png" alt="Logo do Projeto IA Vídeos" class="boas-vindas" />
+    <img src="assets/images/logo.png" alt="Logo do Projeto IA Vídeos" class="boas-vindas" />
 
     <!-- Prompt-box para vídeos -->
     <div class="prompt-box">
@@ -53,13 +58,21 @@
       <p id="status"></p>
       <div id="resultado"></div>
 
-      <!-- Área de compartilhamento -->
+      <!-- Área de compartilhamento com ícones -->
       <div id="compartilhar" style="display:none; margin-top:20px;">
         <h4>Compartilhar vídeo:</h4>
-        <button class="share-btn" id="shareWhats">WhatsApp</button>
-        <button class="share-btn" id="shareFace">Facebook</button>
-        <button class="share-btn" id="shareX">Twitter/X</button>
-        <button class="share-btn" id="shareLinked">LinkedIn</button>
+        <button class="share-btn">
+          <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="icon" /> WhatsApp
+        </button>
+        <button class="share-btn">
+          <img src="assets/icons/facebook.svg" alt="Facebook" class="icon" /> Facebook
+        </button>
+        <button class="share-btn">
+          <img src="assets/icons/twitter.svg" alt="Twitter/X" class="icon" /> Twitter/X
+        </button>
+        <button class="share-btn">
+          <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="icon" /> LinkedIn
+        </button>
       </div>
     </div>
   </section>

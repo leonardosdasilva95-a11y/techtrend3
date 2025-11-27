@@ -1,0 +1,21 @@
+{
+  "name": "techtrends",
+  "version": "1.0.0",
+  "description": "TechTrend 3 é um site informativo sobre as principais tendências tecnológicas atuais, incluindo Inteligência Artificial, Computação em Nuvem e Segurança da Informação. Desenvolvido com HTML, CSS e JavaScript, o projeto apresenta um layout moderno, tema escuro e navegação acessível.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardosdasilva95-a11y/techtrend3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/leonardosdasilva95-a11y/techtrend3/issues"
+  },
+  "homepage": "https://github.com/leonardosdasilva95-a11y/techtrend3#readme"
+}

@@ -1,19 +1,16 @@
 # TechTrend 3
 
-TechTrend 3 é um site informativo sobre as principais tendências tecnológicas atuais, incluindo Inteligência Artificial, Computação em Nuvem e Segurança da Informação. Desenvolvido com HTML, CSS e JavaScript, o projeto apresenta um layout moderno, tema escuro e navegação acessível.
+Projeto desenvolvido para explorar **Inteligência Artificial, Computação em Nuvem e Segurança da Informação**, com foco em acessibilidade, tema escuro e navegação responsiva.
 
-## 🔍 Conteúdo
+---
 
-- **IA** — Aplicações e impacto da Inteligência Artificial  
-- **Cloud** — Vantagens da Computação em Nuvem  
-- **Segurança** — Princípios da Segurança da Informação  
-- **Posts** — Artigos e atualizações sobre tecnologia  
+## 🚀 Tecnologias utilizadas
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js (Express)
+- **APIs:** Google Cloud Vertex AI (Imagen/Gemini)
+- **Controle de versão:** Git + GitHub
 
-## 🖥️ Tecnologias utilizadas
-
-- HTML5  
-- CSS3 (tema escuro responsivo)  
-- JavaScript (interações e alternância de tema)  
-- Git e GitHub  
+---
 
 ## 📁 Estrutura do projeto
+
