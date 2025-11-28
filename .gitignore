@@ -29,3 +29,5 @@ Thumbs.db
 
 # Ignorar coverage de testes
 coverage/
+.vercel
+.env*.local
