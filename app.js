@@ -1,5 +1,26 @@
 // Espera o DOM carregar
+// Espera o DOM carregar
 document.addEventListener("DOMContentLoaded", () => {
+  // Botão "Comece agora"
+  const btnStart = document.getElementById("btnStart");
+  const gerador = document.getElementById("gerador");
+
+  btnStart?.addEventListener("click", () => {
+    gerador.style.display = "block";
+  });
+
+  // ... resto do seu código ...
+
+  // MENU HAMBURGUER RESPONSIVO COM ANIMAÇÃO
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu").querySelector("ul");
+
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+    menuToggle.classList.toggle("active"); // ativa animação das barras
+  });
+}); // <-- fechamento correto
+
   // Botão "Comece agora"
   const btnStart = document.getElementById("btnStart");
   const gerador = document.getElementById("gerador");
@@ -82,21 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Login com Google em desenvolvimento...");
     // Aqui você pode integrar com Google Identity Services
   });
-});
-// Menu hamburguer responsivo
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
-// =============================
-// MENU HAMBURGUER RESPONSIVO
-// =============================
+// MENU HAMBURGUER RESPONSIVO COM ANIMAÇÃO
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu").querySelector("ul");
 
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu").querySelector("ul");
-
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
+  menuToggle.addEventListener("click", () => {
+   navMenu.classList.toggle("show");
+   menuToggle.classList.toggle("active"); // ativa animação das barras
 });
+
+
